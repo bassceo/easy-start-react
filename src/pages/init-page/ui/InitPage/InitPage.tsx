@@ -1,3 +1,4 @@
+import { IInitPageProps } from './ts';
 import { useEffect, useState } from 'react';
 
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -8,7 +9,7 @@ function getRandomCharacterFromWord(word: string) {
   return word.substring(0, index) + randomChar + word.substring(index + 1);
 }
 
-function App() {
+const InitPage = ({ ...props }: IInitPageProps) => {
   const [title, setTitle] = useState('Easy Start React/TS Template');
   const [isShaking, setIsShaking] = useState(false);
 
@@ -25,7 +26,7 @@ function App() {
   }, [title, isShaking]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100" {...props}>
       <h1 className="text-4xl font-bold text-blue-600 mb-4">{title}</h1>
       <h3 className="text-xl text-gray-700">
         By <a href="https://github.com/bassceo" className="text-blue-500">Yaroslav Lukyanchuk</a>
@@ -40,6 +41,6 @@ function App() {
       </label>
     </div>
   );
-}
+};
 
-export default App;
+export default InitPage;

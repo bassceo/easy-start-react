@@ -10,7 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.3.0",
     "@tanstack/react-router": "^1.81.14",
+    "ahooks": "^3.8.1",
+    "axios": "^1.7.7",
+    "install": "^0.13.0",
+    "npm": "^10.9.0",
     "react": "^18.3.1",
     "react-aria-components": "^1.4.1",
     "react-dom": "^18.3.1"
