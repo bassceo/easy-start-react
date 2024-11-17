@@ -1,50 +1,108 @@
-# React + TypeScript + Vite
+# Easy Start React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a template project to quickly start developing with React, TypeScript, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Installation](#installation)
+- [Usage](#usage)
+- [Development](#development)
+- [Build](#build)
+- [Linting](#linting)
+- [Preview](#preview)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To get started, clone the repository and install the dependencies:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+git clone https://github.com/your-username/easy-start-react.git
+cd easy-start-react
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Usage
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To start the development server, run:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm run dev
 ```
+
+## Development
+
+This project uses Vite for fast development. The main entry point is `src/main.tsx`.
+
+## Build
+
+To build the project for production, run:
+
+```sh
+npm run build
+```
+
+## Linting
+
+To lint the project, run:
+
+```sh
+npm run lint
+```
+
+## Preview
+
+To preview the production build, run:
+
+```sh
+npm run preview
+```
+
+## Project Structure
+
+```plaintext
+easy-start-react/
+├── dist/                   # Build output
+├── node_modules/           # Node.js modules
+├── public/                 # Public assets
+├── src/                    # Source code
+│   ├── app/                # Application components
+│   ├── pages/              # Page components
+│   ├── main.tsx            # Main entry point
+│   ├── index.css           # Global styles
+│   └── vite-env.d.ts       # Vite environment types
+├── .gitignore              # Git ignore file
+├── index.html              # HTML template
+├── package.json            # NPM package configuration
+├── postcss.config.js       # PostCSS configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── tsconfig.json           # TypeScript configuration
+├── tsconfig.app.json       # TypeScript app configuration
+├── tsconfig.node.json      # TypeScript node configuration
+├── vite.config.ts          # Vite configuration
+└── README.md               # Project README
+```
+
+## Dependencies
+
+- **React**: ^18.3.1
+- **React DOM**: ^18.3.1
+- **@reduxjs/toolkit**: ^2.3.0
+- **@tanstack/react-router**: ^1.81.14
+- **ahooks**: ^3.8.1
+- **axios**: ^1.7.7
+- **tailwindcss**: ^3.4.15
+
+## Dev Dependencies
+
+- **TypeScript**: ~5.6.2
+- **Vite**: ^5.4.10
+- **ESLint**: ^9.13.0
+- **PostCSS**: ^8.4.49
+- **Autoprefixer**: ^10.4.20
+
+## License
+
+This project is licensed under the MIT License.
